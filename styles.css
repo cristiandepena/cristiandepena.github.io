@@ -20,7 +20,7 @@ h1 {
 }
 
 img {
-  max-inline-size: 100%;
+  inline-size: 100%;
   block-size: auto;
 }
 
@@ -40,8 +40,15 @@ body {
   height: 6vh;
 }
 
+a.icon {
+  display: hidden;
+  visibility: hidden;
+}
+
 #navbar ul > li {
   display: inline-block;
+  padding: 1rem;
+  transition: background-color 250ms ease-out;
 }
 
 #navbar li > a {
@@ -50,11 +57,9 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 1rem;
-  padding: 1rem;
-  transition: background-color 250ms ease-out;
 }
 
-#navbar li a:hover {
+#navbar li:hover {
   background-color: var(--accent-color);
 }
 
@@ -107,6 +112,7 @@ body {
 
 .profile-img {
   height: 250px;
+  width: 250px;
   border-radius: 50%;
   opacity: 0;
   transition: opacity 1s ease-in;
@@ -572,3 +578,76 @@ footer #profile-link:hover {
     background-color: #0d3b66;
   }
 }
+
+/* Media Queries */
+
+@media (max-width: 524px) {
+  /* Navbar */
+  #navbar {
+    display: block;
+    height: 100%;
+    min-block-size: 6vh;
+  }
+  #navbar > a {
+    text-decoration: none;
+    color: var(--light-color);
+  }
+  a.icon {
+    visibility: visible;
+    background: black;
+    display: block;
+    position: relative;
+    padding: 1em;
+  }
+  #myLinks {
+    display: none;
+  }
+
+  #navbar ul > li {
+    display: block;
+    padding: 0.9em 1em;
+  }
+
+  #navbar li:hover {
+    background-color: var(--accent-color);
+  }
+  /* End Navbar */
+
+  #welcome-section {
+    height: 100%;
+  }
+  .overlay {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  #profile {
+    width: 100%;
+    margin: 1em 0;
+  }
+
+  #services {
+    height: 100%;
+  }
+
+  .services-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 0 3em 0;
+  }
+
+  .skills-container {
+  }
+
+  .experience-container .container {
+    padding: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  #myLinks {
+    display: block;
+  }
+}
+
+/*End Media Queries*/
