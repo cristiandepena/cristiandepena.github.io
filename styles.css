@@ -1,8 +1,9 @@
 /* Variables */
 :root {
   --accent-color: #ff7f50;
-  --primary-color: #4a4a4a;
-  --secondary-color: #2a3b5f;
+  --primary-color: #2f2f2f;
+  --secondary-color: #023047;
+  /* #2a3b5f; */
   --light-color: #e5e5e5;
 }
 /* Reset styles */
@@ -19,7 +20,8 @@ h1 {
 }
 
 body {
-  background: linear-gradient(0deg, #4a4a4a, #000);
+  /* background: linear-gradient(180deg, #000, #2f2f2f); */
+  background-color: var(--secondary-color);
   color: #fff;
 }
 
@@ -29,7 +31,7 @@ body {
   display: flex;
   justify-content: end;
   align-items: center;
-  background-color: var(--primary-color);
+  background-color: #000;
   height: 6vh;
 }
 
@@ -161,7 +163,7 @@ body {
   height: 45vh;
 }
 #services h1 {
-  padding: 50px 0;
+  padding: 30px 0;
   text-align: center;
   text-shadow: 4px 4px 4px #000;
 }
@@ -212,7 +214,7 @@ body {
 }
 
 #projects h1 {
-  padding: 50px 0;
+  padding: 30px 0;
   text-align: center;
   text-shadow: 4px 4px 4px #000;
 }
@@ -275,12 +277,14 @@ body {
 
 /* Skills start */
 #skills {
-  height: 30vh;
+  height: 35vh;
+  background-color: #000;
 }
 
 #skills h1 {
   text-align: center;
   text-shadow: 4px 4px 4px #000;
+  padding: 30px 0px;
 }
 
 .skills-container {
@@ -390,8 +394,94 @@ body {
 }
 /* Skills end */
 
+/*Experience start*/
+#experience h1 {
+  text-align: center;
+  padding: 30px 0px;
+  text-shadow: 4px 4px 4px #000;
+}
+
+#experience h3 {
+  color: var(--light-color);
+}
+
+#experience h4 {
+  color: var(--accent-color);
+}
+
+.experience h4 + p {
+  font-style: italic;
+  font-size: 0.8em;
+}
+
+#experience span {
+  color: var(--accent-color);
+}
+.experience-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.experience-container::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  background-color: var(--light-color);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.experience-container .container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.experience-container .container::after {
+  content: "";
+  position: absolute;
+  width: 25vw;
+  height: 1px;
+  right: 0px;
+  background-color: var(--light-color);
+  /* border: 4px solid var(--accent-color); */
+  /* top: 15px; */
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.container.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.container.right {
+  left: 50%;
+}
+
+/* The actual content */
+.experience {
+  padding: 20px 30px;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: 0;
+}
+
+/*Experience end*/
+
 footer {
-  background-color: var(--secondary-color);
+  background-color: #000;
   /* height: 15vh; */
 }
 
