@@ -493,7 +493,6 @@ a.icon {
 
 footer {
   background-color: #000;
-  /* height: 15vh; */
 }
 
 footer ul {
@@ -613,12 +612,27 @@ footer #profile-link:hover {
   }
   /* End Navbar */
 
+  /* Welcome section */
   #welcome-section {
     height: 100%;
   }
+
+  #welcome-section h1 {
+    font-size: 3rem;
+  }
+
+  #welcome-section .title {
+    font-size: 1.6rem;
+  }
+
+  .description {
+    width: 80vw;
+  }
+
   .overlay {
-    flex-direction: column;
+    flex-direction: column-reverse;
     flex-wrap: nowrap;
+    padding: 2em 0;
   }
 
   #profile {
@@ -626,6 +640,9 @@ footer #profile-link:hover {
     margin: 1em 0;
   }
 
+  /*End Welcome*/
+
+  /*Services section*/
   #services {
     height: 100%;
   }
@@ -636,12 +653,21 @@ footer #profile-link:hover {
     padding: 1em 0 3em 0;
   }
 
-  .skills-container {
-  }
+  /*End Services*/
 
+  /*Experience Timeline*/
   .experience-container .container {
     padding: 0;
   }
+
+  /*End Experience Timeline*/
+
+  /*Footer*/
+  footer {
+    padding-bottom: 1.2em;
+  }
+
+  /*End Footer*/
 }
 
 @media (min-width: 768px) {
